@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Ubuntu', 'sans-serif'],
+        sans: ['Gotham', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
+      },
+      colors:{
+        green1:"#aed67d",
       },
     },
   },

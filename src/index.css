@@ -3,17 +3,28 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Ubuntu";
+  font-family: "GothamS";
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: white;
-  background-color: rgb(0, 134, 100);
+  color: rgb(44, 44, 44);
+  background-color: rgb(245, 245, 245);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+.clip{
+  z-index: 2;
+  -webkit-clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
 }
