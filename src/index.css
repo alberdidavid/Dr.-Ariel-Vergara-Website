@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
 :root {
   font-family: "GothamS";
   line-height: 1.5;
@@ -22,6 +24,67 @@ html{
   margin: 0;
   padding: 0;
 }
+
+.btn-gray{
+  background-color: #aed67d !important;
+  border: 0px solid gray !important;
+  color: #353535 !important;
+  font-family: 'Montserrat'!important;
+}
+
+.btn-gray:active{
+  background-color: rgb(209, 209, 209) !important;
+  border: 0px solid gray !important;
+  color: #353535 !important;
+  font-family: 'Montserrat'!important;
+}
+
+.btn-gray:hover{
+  background-color: rgb(209, 209, 209) !important;
+  border: 0px solid gray !important;
+  color: #353535 !important;
+  font-family: 'Montserrat'!important;
+}
+
+.canvas-bg{
+  background-color: #f7f7f7 !important;
+}
+
+a:hover{
+  color: #aed67d !important;
+}
+
+a:active{
+  color: #aed67d !important;
+}
+
+ @media only screen and (min-width:1024px) {
+  .pc-card{
+    display: flex;
+    flex-direction: row !important;
+    background-color: white !important;
+  }
+  
+  .pc-card img{
+    max-width: 30%;
+  }
+  
+  .pc-card button{
+    max-width: 40%;
+  }
+  .radius-check{
+    border-top-right-radius: 0px !important;
+  }
+
+  .pc-text{
+    scale: 1.2;
+  }
+
+  .font{
+    font-size: 2.5rem;
+  }
+
+ }
 
 .clip{
   z-index: 2;

@@ -7,11 +7,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Gotham', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        sans: ['Montserrat'],
       },
       colors:{
         green1:"#aed67d",
+        gray1:"#ececec",
+        gray2:"#353535",
       },
     },
   },

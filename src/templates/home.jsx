@@ -1,58 +1,81 @@
+import Header from "../assets/header";
+import Cards from "../assets/cards";
 import Comentary from "../assets/comentary";
 import Footer from "../assets/footer";
-import { Link } from "react-router-dom";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Home = () => {
   return (
-    <>
-      <div className="flex flex-row items-center py-4 px-12 gap-16">
-        <img
-          className="max-w-[360px]"
-          src="https://i.postimg.cc/0rgtT9gg/avergara.png"
-          alt=""
-        />
-        <div className="flex gap-8">
-          <Link to="/about" className="font-sans font-bold
-                                hover:translate-y-2 rounded-md p-2 duration-500">
-            Quien Soy?
-          </Link>
-          <Link to="/blog" className="font-sans font-bold
-                                hover:translate-y-2 rounded-md p-2 duration-500">
-            Blog
-          </Link>
-          <Link to="/contact" className="font-sans font-bold
-                                hover:translate-y-2 rounded-md p-2 duration-500">
-            Contactanos
-          </Link>
-        </div>
+    <div className="bg-gray1">
+      <Header />
+      <div className="lg:flex lg:flex-col lg:items-center lg:p-8">
+        <Swiper
+          spaceBetween={0}
+          slidesPerView={1}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+          pagination={{ clickable: true }}
+          navigation
+          className="lg:w-[720px]"
+        >
+          <SwiperSlide>
+            <div className="relative h-[85vh] justify-end bg-gray2 ">
+              <img
+                src="https://i.postimg.cc/FKQb62dQ/matthieu-jungfer-0t-AYWIGt-YTo-unsplash.jpg"
+                alt=""
+                className="h-full w-full object-cover brightness-50"
+              />
+              <div className="absolute bottom-4 left-4 font-sans uppercase text-white w-2/3">
+              VOLVÉ A SONREÍR.
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative h-[85vh] justify-end">
+              <img
+                src="https://i.postimg.cc/52zqnxt3/brooke-cagle-g1-Kr4-Ozfoac-unsplash-1.jpg"
+                alt=""
+                className="h-full w-full object-cover brightness-50"
+              />
+              <div className="absolute bottom-4 left-4 font-sans uppercase text-white w-2/3">
+              DESLUMBRA A LOS DEMÁS CON TU NUEVA SONRISA
+              </div>
+            </div>
+          </SwiperSlide>
+          
+          <SwiperSlide>
+            <div className="relative h-[85vh] justify-end bg-gray2">
+              <img
+                src="https://i.postimg.cc/d0mRc4rZ/roman-shilin-6whf-YYGUWE-unsplash.jpg
+"               className="h-full w-full object-cover brightness-50"
+                alt=""
+              />
+              <div className="absolute bottom-4 left-4 font-sans uppercase text-white w-2/3">
+                RECUPERA EL BIENESTAR Y LA COMODIDAD
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      
+      <section className="flex flex-col lg:items-center bg-gray1 p-3 lg:w-[720px] lg:p-0">
+        <h1 className="text-3xl font-sans font-extrabold mb-[1em] mx-4 mt-12 text-left w-full font lg:mx-0">
+          ¿Cómo Trabajo?
+        </h1>
+        <Cards></Cards>
+      </section>
+      <section className="flex flex-col items-center gap-4 bg-gray1 py-4 px-3 lg:w-[720px]">
+        <Comentary />
+        <button className="px-3 py-2 bg-green1 rounded-md text-xl w-[240px] m-4 uppercase font-sans font-bold">
+          AGENDAR CITA
+        </button>
+      </section>
       </div>
-      <div className=" h-[80vh] flex flex-row items-center justify-between px-32 gap-16">
-        <div className="flex flex-col gap-4 ml-12">
-          <h1 className="font-sans font-bold text-5xl">Volver a Sonreir</h1>
-          <p className="font-sans text-lg">
-            Tratamientos de calidad esperan por vos
-          </p>
-          <button className="w-64 bg-green1 px-4 py-3 rounded-lg font-sans font-bold 
-                            duration-500 hover:opacity-60 ">Agenda tu cita</button>
-        </div>
-        <img src="https://i.ibb.co/zVT1kqz/Ariel-Transparente.png" alt="Ariel-Transparente" border="0"
-        className="h-[103%]"/>
-      </div>
-      <div className="h-screen bg-green1 shadow-md clip">
-
-      </div>
-      <div className="flex flex-row justify-center p-16 bg-white">
-        <h2 className="font-sans font-bold text-xl text-gray-900 mx-10">
-          Comentarios
-        </h2>
-        <div className="flex flex-col items-center gap-8 font-sans w-1/2">
-          <Comentary />
-          <Comentary />
-          <Comentary />
-        </div>
-      </div>
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 };
 
